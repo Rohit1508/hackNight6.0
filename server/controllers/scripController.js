@@ -55,8 +55,8 @@ const config = {
     connection.execSql(request);
   }
 
-const createConnection = () => {
-  const connection = new Connection(config);
+const createConnection = async () => {
+  const connection = await new Connection(config);
   connection.on("connect", err => {
     if (err) {
       console.error(err.message);

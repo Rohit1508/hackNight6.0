@@ -1,0 +1,22 @@
+.kycContainer {
+  display: flex;
+  flex-direction: column
+}
+label {
+  justify-content: start;
+  align-items: start;
+}
+label input {
+  display: block
+}
+label select {
+  display: block
+}
+label div {
+  text-align: initial;
+  align-items: flex-start;
+}
+.submit {
+  width: 10%;
+  align-self:center
+}
