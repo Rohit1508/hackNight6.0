@@ -1,0 +1,59 @@
+// SCSS Variables
+
+//colors
+$default: var(--default);
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$red: var(--red);
+$green: var(--green);
+$dark-green: var(--dark-green);
+$yellow: var(--yellow);
+$light-yellow: var(--light-yellow);
+$grey1: var(--grey1);
+$grey2: var(--grey2);
+$grey3: var(--grey3);
+$grey4: var(--grey4);
+$grey5: var(--grey5);
+$bg-color: var(--bg-color);
+$gradient-color1: var(--gradient-color1);
+$gradient-color2: var(--gradient-color2);
+$gradient-color3: var(--gradient-color3);
+$bg-blue: var(--bg-blue);
+$white: #fff;
+
+//buttons
+$pseudo-active: rgba(0, 0, 0, .1);
+$pseudo-hover: rgba(255, 255, 255, .3);
+$pseudo-disabled: rgba(0, 0, 0, 0);
+
+// box-shadows
+$input-box-shadow: 0 10px 20px 0 rgba(89, 102, 135, .06);
+$drop-down-box-shadow: 0 8px 10px 0 rgba(111, 131, 187, .2);
+$tab-shadow: 0 0 5px 0 rgba(0, 0, 0, .12);
+$popup-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .2);
+$side-pane-box-shadow: 0 2px 2px 0 rgba(103, 103, 103, .5);
+$striped-table-hover-shadow: 0 0 1rem 0 rgba(0, 0, 0, .09);
+$tool-tip-box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, .15);
+$numbered-tab-shadow: 0 2px 6px 0 rgba(128, 152, 213, .06);
+$order-flow-header-box-shadow: 0 .5px 1px 0 rgba(0, 0, 0, .2);
+$login-box-shadow: 0 3px 6px 0 rgba(89, 102, 135, .1);
+$info-cards-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .05);
+
+// Positions
+$header-box-shadow-position: 0 2px 6px 0 rgba(128, 152, 213, .06);
+$modal-header-box-shadow: 0 2px 2px 0 rgba(220, 220, 220, .5);
+$modal-card-box-shadow: 0 2px 6px 0 rgba(128, 152, 213, .06);
+$position-list-box-shadow: 0 2px 6px 0 rgba(128, 152, 213, .06);
+$position-list-hover-box-shadow: -3px 0 14px 0 rgba(36, 33, 71, .13);
+$header-background-color: rgba(173, 175, 182, .05);
+
+//components
+ // Watchlist
+$stocks-suggestion-box-shadow: rgba(171, 193, 255, .2);
+$watchlist-container-box-shadow: 0 2px 6px 0 rgba(128, 152, 213, .06);
+$watchList-box-shadow: 0 -4px 10px 0 rgba(173, 175, 182, .3);
+$scrip-hover-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .09);
+
+//components
+ // Watchlist
+$stocks-container-box-shadow: rgba(171, 193, 255, .2);
