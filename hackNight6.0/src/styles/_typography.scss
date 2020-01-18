@@ -1,0 +1,62 @@
+// scss-lint:disable PropertySpelling
+@mixin typography($type) {
+  @if $type == h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+  }
+
+  @if $type == h1_mid {
+    font-size: 2.4rem;
+    font-weight: normal;
+  }
+
+  @if $type == h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  @if $type == h3 {
+    font-size: 1.8rem;
+    font-weight: normal;
+  }
+
+  @if $type == h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  @if $type == h5 {
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
+
+  @if $type == h6 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+  }
+
+  @if $type == h7 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    letter-spacing: .5px;
+  }
+
+  @if $type == h8 {
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: .42px;
+  }
+
+  @if $type == h9 {
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: .42px;
+  }
+
+  @if $type == h10 {
+    font-size: .8rem;
+    font-weight: normal;
+    letter-spacing: normal;
+  }
+}
