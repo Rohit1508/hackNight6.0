@@ -9,7 +9,7 @@ import HttpService from "./HttpService";
 
 class ApiService {
   // Auth Api's
-/*   static login(credentials) {
+  /*   static login(credentials) {
     const endpoint = ENDPOINTS.auth.login();
     const url = `${AUTH_BASE_ROUTE}/${endpoint}`;
     const options = { url, body: credentials };
@@ -36,34 +36,27 @@ class ApiService {
     return HttpService.getRequest({ url });
   }
 
-  static sendKycRequest({
-    pan,
-    panName,
-    dob,
-    addressProof,
-    proofId
-  }) {
+  static sendKycRequest({ pan, panName, dob, addressProof, proofId }) {
     const endpoint = ENDPOINTS.stock.sendKycRequest();
     const url = `${BASE_URL}/${endpoint}`;
     const params = {
-      userId : 'fc774621-dcbd-4cc9-9e29-b5d7dcd7209f',
+      userId: "db527e63-bf50-457f-b99b-f48f1c7829c7",
       PAN_number: pan,
       Name_On_PAN: panName,
-      DOB:dob,
-      Add_Proof: 2,
+      DOB: dob,
+      Add_Proof: addressProof,
       ProofId: proofId,
       Add_Front: null,
       Add_Back: null,
       PAN_Image: null,
       Status: null
-    }
+    };
     const options = {
       url,
       body: params
-    }
+    };
     return HttpService.postRequest(options);
   }
-
 }
 
 export default ApiService;
