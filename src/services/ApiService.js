@@ -55,11 +55,11 @@ class ApiService {
     const endpoint = ENDPOINTS.stock.sendKycRequest();
     const url = `${BASE_URL}/${endpoint}`;
     const params = {
-      userId: "fc774621-dcbd-4cc9-9e29-b5d7dcd7209f",
+      userId: "db527e63-bf50-457f-b99b-f48f1c7829c7",
       PAN_number: pan,
       Name_On_PAN: panName,
       DOB: dob,
-      Add_Proof: 2,
+      Add_Proof: addressProof,
       ProofId: proofId,
       Add_Front: null,
       Add_Back: null,
