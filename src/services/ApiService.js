@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import moment from "moment";
-import { reject } from "q";
 import {
   ENDPOINTS,
   AUTH_BASE_ROUTE,
