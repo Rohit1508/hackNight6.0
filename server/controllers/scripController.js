@@ -26,35 +26,32 @@ const config = {
   },
   server: HOST, // update me
   options: {
-    database: DATABASE, //update me
-    //encrypt: true
+    database: DATABASE // update me
+    // encrypt: true
   }
 };
 
-  function queryDatabase(connection, query) {
-    console.log("Reading rows from the Table...");
+function queryDatabase(connection, query) {
+  console.log("Reading rows from the Table...");
 
-    // Read all rows from table
-    const request = new Request(
-      query,
-      (err, rowCount) => {
-        if (err) {
-          console.error(err.message);
-        } else {
-          console.log(`${rowCount} row(s) returned`);
-        }
-      }
-    );
+  // Read all rows from table
+  const request = new Request(query, (err, rowCount) => {
+    if (err) {
+      console.error(err.message);
+    } else {
+      console.log(`${rowCount} row(s) returned`);
+    }
+  });
 
-    request.on("row", columns => {
-      columns.forEach(column => {
-        console.log("%s\t%s", column.metadata.colName, column.value);
-      });
+  request.on("row", columns => {
+    columns.forEach(column => {
+      console.log("%s\t%s", column.metadata.colName, column.value);
     });
-    connection.execSql(request);
-  }
+  });
+  connection.execSql(request);
+}
 
-const createConnection = async (query) => {
+const createConnection = async query => {
   const connection = await new Connection(config);
   connection.on("connect", err => {
     if (err) {
@@ -65,28 +62,18 @@ const createConnection = async (query) => {
   });
 };
 
-const sendKycRequest = async (params) => {
+const sendKycRequest = async params => {
   await createConnection(scripMasterQuery.postKycRequest(params));
-}
+};
 
 const getStockDetails = async params => {
   const conn = await createConnection();
   return queryDatabase(scripMasterQuery.getStockDetails(params), conn);
 };
 
-
 module.exports = {
   sendKycRequest,
-  getStockDetails,
+  getStockDetails
 };
 
-
-
-
-
-
-
-
 // Attempt to connect and execute queries if connection goes through
-
-

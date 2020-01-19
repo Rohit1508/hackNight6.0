@@ -1,13 +1,12 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import ApiService from './services/ApiService';
-import KycForm from './components/user/KycForm/kyc';
+import UserContainer from "./components/user/UserContainer";
 
 function App() {
   return (
     <div className="App">
-     <KycForm/>
+      <UserContainer />
     </div>
   );
 }

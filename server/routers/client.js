@@ -2,9 +2,7 @@ const express = require("express");
 const circularJSON = require("circular-json");
 const scripController = require("../controllers/scripController");
 
-const {
-  sendKycRequest,
-} = scripController;
+const { sendKycRequest } = scripController;
 
 const router = express.Router();
 

@@ -8,6 +8,10 @@ export const ENDPOINTS = {
   },
 
   stock: {
-    sendKycRequest: () => "client/kycRequest",
+    sendKycRequest: () => "client/kycRequest"
+  },
+
+  kyc: {
+    kycStatus: () => "client/kycStatus"
   }
 };
