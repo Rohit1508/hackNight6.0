@@ -3,3 +3,18 @@
   align-items: center;
   flex-direction: column;
 }
+
+.card {
+  border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    margin-right: 50px;
+}
+
+.cardContainer {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  justify-content: space-around
+}

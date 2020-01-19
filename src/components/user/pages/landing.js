@@ -4,7 +4,22 @@ import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissa
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import KycForm from "../KycForm";
 import ApiService from "../../../services/ApiService";
+import loanType from "./utils";
 import "./index.css";
+
+const generateLoanTemplate = () => {
+  return loanType.map(loan => {
+    return (
+      <div className="card">
+        <img src={loan.img} alt="car" height="150" width="200" />
+        <div>{loan.label}</div>
+        <Button variant="contained" color="primary">
+          Apply
+        </Button>
+      </div>
+    );
+  });
+};
 
 const makeKycTemplate = status => {
   if (status) {
@@ -12,6 +27,7 @@ const makeKycTemplate = status => {
       <div className="kycStatus">
         <div>KYC Verified</div>
         <InsertEmoticonIcon />
+        <div className="cardContainer">{generateLoanTemplate()}</div>
       </div>
     );
   }
@@ -28,7 +44,7 @@ const makeKycTemplate = status => {
 };
 
 const kycStatus = setKycStatus => {
-  ApiService.kycStatus(122)
+  ApiService.kycStatus(123)
     .then(res => {
       return setKycStatus(res);
     })
