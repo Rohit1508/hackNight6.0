@@ -7,7 +7,7 @@ const localStaging = require("./localStaging");
 const VERSION = require("./version");
 
 const SERVER_ROOT = path.resolve(__dirname, "..");
-const SERVER_NAME = "PERISCOPE";
+const SERVER_NAME = "lending";
 
 const environment = {
   production,
@@ -33,7 +33,7 @@ const config = environment[ENV];
 const cookieFields = {
   SESSION_ID: "app_t",
   INITIAL_TOKEN: "initial_t",
-  USER_ID: "PM_PERISCOPE_USER_ID"
+  USER_ID: "PM_LENDING_USER_ID"
 };
 
 module.exports = {

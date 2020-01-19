@@ -1,13 +1,10 @@
-const DOMAIN = "https://api-eq-dev.paytmmoney.com";
-
-const internalDomain = "http://dev-bo-periscope.equity-bo";
+const internalDomain = "";
 
 module.exports = {
   APM_URL: "",
   PORT: 8989,
   API_HOST: {
-    STOCK_URL: `${internalDomain}/backoffice/periscope/v1/settlement`,
-
+    STOCK_URL: `${internalDomain}/`
   },
   SCRIP_DB: {
     HOST: "webdot.database.windows.net",

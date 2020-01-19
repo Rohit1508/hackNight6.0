@@ -6,8 +6,6 @@ const { sendKycRequest } = scripController;
 
 const router = express.Router();
 
-// removing `All` from query params, making it easy for sql query where cl
-
 router.post("/kycRequest", (req, res) => {
   return sendKycRequest(req.body)
     .then(response => {

@@ -6,11 +6,9 @@ function generateRequestOptions({ headers = {}, reqLocals, ...options }) {
 
   updatedOptions.headers = {
     ...headers,
-    "sys-type": "PERISCOPE",
     "x-pmmodule-name": SERVER_NAME,
     "content-type": "application/json",
-    "org-type": "INTERNAL",
-    "org-id": "PAYTMMONEY"
+    "org-type": "INTERNAL"
   };
 
   if (reqLocals) {
