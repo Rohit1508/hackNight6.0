@@ -79,10 +79,10 @@ const KycForm = () => {
             onChange={e => handleChange(e.target)}
             defaultValue={addressProof}
           >
-            <option value="Aadhaar">Aadhar Card</option>
-            <option value="Driving">Driving</option>
-            <option value="passport">passport</option>
-            <option value="voter id">voter id</option>
+            <option value="1">Aadhar Card</option>
+            <option value="2">Driving</option>
+            <option value="3">passport</option>
+            <option value="4">voter id</option>
           </select>
         </label>
         <label>
