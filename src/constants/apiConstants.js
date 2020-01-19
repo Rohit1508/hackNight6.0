@@ -8,6 +8,6 @@ export const ENDPOINTS = {
   },
 
   stock: {
-    settlementDetails: () => "scrip/details",
+    sendKycRequest: () => "client/kycRequest",
   }
 };

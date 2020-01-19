@@ -1,22 +1,27 @@
 const scripMasterQuery = {
-  getStockDetails: ({
-    exchange,
-    instrument,
-    segment,
-    series,
-    stenabledtus,
-    name
-  }) => `SELECT *
-  FROM equity_scrip_master
-  where exchange${exchange ? `='${exchange}'` : ` like '%'`}
-    and segment${instrument ? `='${instrument}'` : ` like '%'`}
-    and instrument${segment ? `='${segment}'` : ` like '%'`}
-    and series${series ? `='${series}'` : ` like '%'`}
-    and stenabledtus${stenabledtus ? `='${stenabledtus}'` : ` like '%'`}
-    and name like '${name}%'
-   `,
-  getFilterOptions: () =>
-    `SELECT distinct exchange,segment,instrument,series,stenabledtus FROM equity_scrip_master`
+  postKycRequest: ({  userId,
+  PAN_number,
+  Name_On_PAN,
+  DOB,
+  Add_Proof,
+  ProofId,
+  Add_Front,
+  Add_Back,
+  PAN_Image,
+  Status}) => {
+    return `insert into [dbo].[KYCDetail](userId,
+      PAN_number,
+      Name_On_PAN,
+      DOB,
+      Add_Proof,
+      ProofId,
+      Status,
+      Add_Front,
+      Add_Back,
+      PAN_Image
+      ) values("${userId}", ${PAN_number}, "${Name_On_PAN}", convert(date,"${DOB}"),
+      ${Add_Proof}, ${ProofId}, ${Status}, ${Add_Front}, ${Add_Back}, ${PAN_Image})`
+  }
 };
 
 module.exports = scripMasterQuery;

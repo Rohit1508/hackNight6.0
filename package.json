@@ -48,7 +48,7 @@
   "scripts": {
     "start": "node server/index.js",
     "client": "react-scripts start",
-    "dev": "webpack-dev-server --config webpack.config.js --open",
+    "dev": "webpack-dev-server --config webpack-dev.config.js --open",
     "build": "webpack --config webpack.config.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

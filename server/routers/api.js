@@ -2,8 +2,8 @@ const express = require("express");
 
 const router = express.Router();
 
-const scrip = require("./scrip");
+const client = require("./client");
 
-router.use("/scrip", scrip);
+router.use("/client", client);
 
 module.exports = router;

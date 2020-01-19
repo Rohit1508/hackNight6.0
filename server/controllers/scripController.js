@@ -31,12 +31,12 @@ const config = {
   }
 };
 
-  function queryDatabase(connection) {
+  function queryDatabase(connection, query) {
     console.log("Reading rows from the Table...");
 
     // Read all rows from table
     const request = new Request(
-      `select * from login`,
+      query,
       (err, rowCount) => {
         if (err) {
           console.error(err.message);
@@ -44,7 +44,6 @@ const config = {
           console.log(`${rowCount} row(s) returned`);
         }
       }
-
     );
 
     request.on("row", columns => {
@@ -55,21 +54,20 @@ const config = {
     connection.execSql(request);
   }
 
-const createConnection = async () => {
+const createConnection = async (query) => {
   const connection = await new Connection(config);
   connection.on("connect", err => {
     if (err) {
       console.error(err.message);
     } else {
-      queryDatabase(connection);
+      queryDatabase(connection, query);
     }
   });
 };
 
-const getFilterOptions = async () => {
-  const conn = await createConnection();
-  return queryDatabase(scripMasterQuery.getFilterOptions(), conn);
-};
+const sendKycRequest = async (params) => {
+  await createConnection(scripMasterQuery.postKycRequest(params));
+}
 
 const getStockDetails = async params => {
   const conn = await createConnection();
@@ -78,7 +76,7 @@ const getStockDetails = async params => {
 
 
 module.exports = {
-  getFilterOptions,
+  sendKycRequest,
   getStockDetails,
 };
 
